@@ -10,13 +10,37 @@ const actualPrice=p=>p.actualPrice ?? p.mrp ?? null;
 function save(){localStorage.setItem("mkCart",JSON.stringify(cart))}
 function qty(id){const x=cart.find(i=>String(i.id)===String(id));return x?x.qty:0}
 function setQty(id,n){
- n=Math.max(0,parseInt(n,10)||0);
- const p=PRODUCTS_LIST.find(x=>String(x.id)===String(id)); if(!p)return;
- const x=cart.find(i=>String(i.id)===String(id));
- if(n===0) cart=cart.filter(i=>String(i.id)!==String(id));
- else if(x)x.qty=n;
- else cart.push({id:p.id,name:p.name,content:p.content||"",price:Number(p.price)||0,qty:n});
- save(); render();
+    n = Math.max(0, parseInt(n,10) || 0);
+
+    // Find item already in cart first.
+    const x = cart.find(i => String(i.id) === String(id));
+
+    if(n === 0){
+        cart = cart.filter(i => String(i.id) !== String(id));
+
+    }else if(x){
+        // Works for Gift Boxes and normal crackers
+        x.qty = n;
+
+    }else{
+        // New normal cracker
+        const p = PRODUCTS_LIST.find(
+            x => String(x.id) === String(id)
+        );
+
+        if(!p) return;
+
+        cart.push({
+            id: p.id,
+            name: p.name,
+            content: p.content || "",
+            price: Number(p.price) || 0,
+            qty: n
+        });
+    }
+
+    save();
+    render();
 }
 function totals(){return {qty:cart.reduce((a,x)=>a+x.qty,0),amount:cart.reduce((a,x)=>a+x.qty*x.price,0)}}
 

@@ -1405,47 +1405,56 @@ window.PRODUCTS = [
   },
   {
     "id": 157,
-    "name": "Yuvi 21 items",
+    "name": "Jallikattu 21 items",
     "category": "gift",
     "categoryLabel": "Gift Boxes",
     "content": "21items",
-    "price": 350.0,
+    "price": 300.0,
     "icon": "🎁"
   },
   {
     "id": 158,
-    "name": "Rohit 30 items",
+    "name": "KungfuPanda 26 items",
     "category": "gift",
     "categoryLabel": "Gift Boxes",
-    "content": "30items",
-    "price": 550.0,
+    "content": "26items",
+    "price": 350.0,
     "icon": "🎁"
   },
   {
     "id": 159,
-    "name": "Sachin 35 items",
+    "name": "FestivalCombo 36 items",
     "category": "gift",
     "categoryLabel": "Gift Boxes",
-    "content": "35items",
-    "price": 600.0,
+    "content": "36items",
+    "price": 480.0,
     "icon": "🎁"
   },
   {
     "id": 160,
-    "name": "Kohli 40 items",
+    "name": "Dandiya 41 items",
     "category": "gift",
     "categoryLabel": "Gift Boxes",
-    "content": "40items",
-    "price": 730.0,
+    "content": "41items",
+    "price": 600.0,
     "icon": "🎁"
   },
   {
     "id": 161,
-    "name": "Dhoni 51 items",
+    "name": "Meenakshi 51 items",
     "category": "gift",
     "categoryLabel": "Gift Boxes",
     "content": "51items",
-    "price": 1100.0,
+    "price": 750.0,
+    "icon": "🎁"
+  },
+  {
+    "id": 162,
+    "name": "KingLion 60 items",
+    "category": "gift",
+    "categoryLabel": "Gift Boxes",
+    "content": "60items",
+    "price": 1000.0,
     "icon": "🎁"
   }
 ];

@@ -66,7 +66,13 @@ function filtered(){
 function productRow(p){
  const q=qty(p.id), line=(Number(p.price)||0)*q, ap=actualPrice(p);
  return `<div class="product-row">
-   <div class="prod-img">${esc(p.icon||"🎆")}</div>
+  <div class="prod-img">
+  <img
+    src="${esc(p.image || '')}"
+    alt="${esc(p.name)}"
+    onclick="openProductImage('${esc(p.image || '')}', '${esc(p.name)}')"
+  >
+</div>
    <div class="prod-name"><b>${esc(p.name)}</b><small>${esc(p.categoryLabel||"")}</small></div>
    <div class="content">${esc(p.content||"—")}</div>
    <div class="actual">${ap?`<s>₹${money(ap)}</s>`:"—"}</div>

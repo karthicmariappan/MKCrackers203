@@ -534,3 +534,94 @@ nav a{white-space:nowrap}
   }
 
 }
+/* =========================================
+   COMPACT PRODUCT TABLE / PRODUCT ROW
+========================================= */
+
+.prod-img {
+  width: 100%;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.prod-img img {
+  width: 105px;
+  height: 105px;
+
+  object-fit: contain;
+
+  display: block;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+
+  transition: transform 0.2s ease;
+}
+
+.prod-img img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Product row */
+
+.product-row {
+  min-height: 145px;
+  height: 145px;
+}
+
+
+/* Keep all product information vertically centered */
+
+.product-row > * {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Product name/details */
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* Quantity controls */
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .prod-img {
+    height: 105px;
+  }
+
+  .prod-img img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .product-row {
+    min-height: 125px;
+    height: 125px;
+  }
+
+}

@@ -6,7 +6,7 @@ window.PRODUCTS = [
     "categoryLabel": "One sound crackers",
     "content": "5pcs/1pkt",
     "price": 10.0,
-    "icon": "💥"
+    "image": "assets/kuruvi2.jpeg"
   },
   {
     "id": 2,

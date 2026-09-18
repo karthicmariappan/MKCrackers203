@@ -1,4 +1,4 @@
-const CONFIG={googleSheetsWebAppUrl:"https://script.google.com/macros/s/AKfycbzSHllw1OUQbQmgQdAhQFkApA6BZWyR5_o2JTEQ3C3Rw_2DIh-9MeQMIdqzn7o4qRwU/exec"};
+const CONFIG={googleSheetsWebAppUrl:"https://script.google.com/macros/s/AKfycbyNRBaGCHBQMXngSmyHs707pSwv588WKVLWU50C35_bgehE2GY8vPFkc2N5zM-gvQrkgQ/exec"};
 const PRODUCTS_LIST=Array.isArray(window.PRODUCTS)?window.PRODUCTS:[];
 console.log('MK Crackers products loaded:', PRODUCTS_LIST.length);
 let cart=JSON.parse(localStorage.getItem("mkCart")||"[]");

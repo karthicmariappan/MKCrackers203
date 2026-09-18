@@ -153,3 +153,45 @@ $("#enquiryForm").onsubmit=e=>{
 };
 
 render();
+// Product Image Popup
+function openProductImage(imageSrc, productName) {
+
+  const modal = document.getElementById("productImageModal");
+  const image = document.getElementById("largeProductImage");
+  const name = document.getElementById("largeProductImageName");
+
+  image.src = imageSrc;
+  image.alt = productName;
+  name.textContent = productName;
+
+  modal.classList.add("show");
+
+  document.body.style.overflow = "hidden";
+}
+
+function closeProductImage() {
+
+  const modal = document.getElementById("productImageModal");
+
+  modal.classList.remove("show");
+
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("click", function(event) {
+
+  const modal = document.getElementById("productImageModal");
+
+  if (event.target === modal) {
+    closeProductImage();
+  }
+
+});
+
+document.addEventListener("keydown", function(event) {
+
+  if (event.key === "Escape") {
+    closeProductImage();
+  }
+
+});

@@ -557,3 +557,119 @@ nav a{white-space:nowrap}
   }
 
 }
+/* ==========================================
+   COMPACT CLOSED PRODUCT ROW
+========================================== */
+
+/* Main product row */
+.product-row {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 130px;
+    height: 130px;
+
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+
+    display: grid;
+    align-items: stretch;
+
+    overflow: hidden;
+}
+
+
+/* Product image cell */
+.prod-img {
+    height: 100% !important;
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+}
+
+
+/* Product image */
+.prod-img img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+
+    display: block;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+}
+
+
+/* Keep all cells vertically centered */
+.product-row > div {
+    box-sizing: border-box;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Product information */
+.product-row .prod-info {
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 8px 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* Product name */
+.product-row h3 {
+    margin: 0 0 5px 0;
+}
+
+
+/* Category/content text */
+.product-row p {
+    margin: 0;
+}
+
+
+/* Quantity section */
+.product-row .qty-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .product-row {
+        min-height: 115px;
+        height: 115px;
+    }
+
+    .prod-img {
+        padding: 5px;
+    }
+
+    .prod-img img {
+        width: 85px;
+        height: 85px;
+    }
+
+}
